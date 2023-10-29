@@ -5,8 +5,9 @@ var readline = require('readline-sync')
 
 */
 
-let hp, attack, dialogue1, dialogue2, dialogue3, dialogue4;
+let hp, attack, dialogue1, dialogue2, dialogue3, dialogue4, ehp;
 hp = 30;
+ehp = Math.floor(Math.random() * 19) + 2;
 attack = 5;
 dialogue1 = ""
 dialogue2 = ""
@@ -22,25 +23,28 @@ function addSpaces(txt, len){
 function drawInterface(){
     console.log("                                                                                                                        ");
     console.log("                                                                                                                        ");
-    console.log(" _____________    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   ____________________ ");
-    console.log(" |  {STATS}  |    X                                                                            X   |    [COMMANDS]    | ");
-    console.log(" | HP: " + addSpaces(hp,6) +"|    X                                                                            X   |                  | ");
-    console.log(" | ATK: " + addSpaces(attack,5 ) +"|    X                                                                            X   |                  | ");
-    console.log(" |___________|    X                                                                            X   | <attack>         | ");
-    console.log("                  X                                                                            X   |                  | ");
-    console.log("                  X                                                                            X   | <block>          | ");
-    console.log(" ______________   X                                                                            X   |                  | ");
-    console.log(" |  {BUFFS}   |   X                                                                            X   | <heal>           | ");
-    console.log(" |            |   X                                                                            X   |                  | ");
-    console.log(" |  ATK+      |   X                                                                            X   | <run>            | ");
-    console.log(" |            |   X                                                                            X   |                  | ");
-    console.log(" |  DEF+      |   X                                                                            X   |                  | ");
-    console.log(" |            |   X                                                                            X   |                  | ");
-    console.log(" |            |   X                                                                            X   |                  | ");
-    console.log(" |            |   X                                                                            X   |                  | ");
-    console.log(" |____________|   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   |__________________| ");
+    console.log(" _____________    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    ______________ ");
+    console.log(" |  {YOU}    |    X                                                                            X    |  {ENEMY}   | ");
+    console.log(" | HP: " + addSpaces(hp,6) +"|    X                                                            X    | HP: " + addSpaces(ehp,8) +"| ");
+    console.log(" | ATK: " + addSpaces(attack,5 ) +"|    X                                                      X    |            | ");
+    console.log(" |___________|    X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  X                                                                            X    |            | ");
+    console.log("                  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    |____________| ");
 
 }
+
+
+
 function stuk0(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" ______________________________________________________________________________________________________________________ ");
     console.log(" | " + addSpaces("Jij bent een dappere avonturier die tijdens een van zijn zoektochten naar een schat," ,115) + "| ");
@@ -51,10 +55,16 @@ function stuk0(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log("                                                                                                                        ");
     console.log("                                                                                                                        ");
     console.log("                                                                                                                        ");
-
+       answerstuk0 = ['Start'],
+    indexstuk0 = readline.keyInSelect(answerstuk0, '');
+    console.log(indexstuk0)
+    if (indexstuk0 == 0) {
+        stuk1()        
+    }
 
 }
 function stuk1(dialogue1, dialogue2, dialogue3, dialogue4){
+    drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
     console.log(" | " + addSpaces("Je wordt wakker en kijkt om je heen. Je hebt een enorme pijn en je ziet bijna geen hand voor ogen. " ,115) + "| ");
     console.log(" | " + addSpaces("Links van je zie je een lockpick waarmee je de gevangenis deur open zou kunnen breken. ",115) + "| ");
@@ -72,7 +82,6 @@ function stuk1(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log("                                                                                                                        ");
     console.log("                                                                                                                        ");
 
-
 }
 function stuk2(dialogue1, dialogue2, dialogue3, dialogue4){
     drawInterface()
@@ -86,19 +95,19 @@ function stuk2(dialogue1, dialogue2, dialogue3, dialogue4){
     indexstuk2 = readline.keyInSelect(answerstuk2, 'Wat kies je?');
     if (indexstuk2 == 0) {
         stuk4()        
-    } else if (indexstuk2 == 1){
+    } else if (indexstuk2 == 1)
         stuk5()
     }
     console.log("                                                                                                                        ");
     console.log("                                                                                                                        ");
-    
+   
 
 }
 function stuk3(dialogue1, dialogue2, dialogue3, dialogue4){
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
-    console.log(" | " + addSpaces("Je kruipt door het gat een en beland in een opslag ruimte. Aan de muur hangt een zwaard die je gelijk pakt." ,115) + "| ");
-    console.log(" | " + addSpaces("Je besluit verder te zoeken door de spullen heen en vindt 3 stukken eten. ",115) + "| ");
+    console.log(" | " + addSpaces("Je kruipt door het gat een en beland in een opslag ruimte. " ,115) + "| ");
+    console.log(" | " + addSpaces("Aan de muur hangt een zwaard die je gelijk pakt.",115) + "| ");
     console.log(" | " + addSpaces("Terwijl je bezig ben met zoeken stoot je per ongeluk een doos om. Een Skelet hoort het en komt jou kant op. ",115) + "| ");
     console.log(" | " + addSpaces("Je moet kiezen tussen het gevecht aan te gaan of je ergens te verstoppen",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
@@ -118,9 +127,9 @@ function stuk4(dialogue1, dialogue2, dialogue3, dialogue4){
     
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
-    console.log(" | " + addSpaces("Je loopt richting de stemmen en komt erachter dat het een kamer is met een aantal Skeletten die pauze lijken te houden,",115) + "| ");
-    console.log(" | " + addSpaces("je besluit de kamer te betreden en om ze heen te sluipen. Op de tafel zie je een ijzer borstharnas liggen. ",115) + "| ");
-    console.log(" | " + addSpaces("Je doet het ijzeren harnas aan en sluipt verder de kamer uit. ",115) + "| ");
+    console.log(" | " + addSpaces("Je loopt richting de stemmen en komt erachter dat het een kamer is,",115) + "| ");
+    console.log(" | " + addSpaces("met een aantal Skeletten die pauze lijken te houden, je besluit de kamer te betreden,",115) + "| ");
+    console.log(" | " + addSpaces("en om ze heen te sluipen. Je sluipt verder de kamer uit. ",115) + "| ");
     console.log(" | " + addSpaces("Je moet kiezen tussen het gevecht aan te gaan of je ergens te verstoppen",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     answerstuk4 = ['Teruglopen en vechten', 'Doorlopen',],
@@ -152,9 +161,9 @@ function stuk6(dialogue1, dialogue2, dialogue3, dialogue4){
     
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
-    console.log(" | " + addSpaces("Je verstopt je achter een grote kist. Het Skelet is met zijn rug naar je toegekeerd, je merkt op dat de Skelet een sleutel bij zich heeft.",115) + "| ");
-    console.log(" | " + addSpaces("De sleutel staat Kamer 2 geschreven, je pakt de sleutel en wacht tot de skelet de kamer uitloopt en je loopt vervolgens de opslag kamer uit.",115) + "| ");
-    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur met Kamer 2 erop genoteerd. ",115) + "| ");
+    console.log(" | " + addSpaces("Je verstopt je achter een grote kist, je merkt op dat de Skelet een sleutel bij zich heeft.",115) + "| ");
+    console.log(" | " + addSpaces("De sleutel staat een 2 geschreven, je pakt de sleutel en wacht tot de skelet de kamer uitloopt.",115) + "| ");
+    console.log(" | " + addSpaces("Vervolgens sluip je de kamer uit en zie je grote ijzeren deur met 2 erop genoteerd. ",115) + "| ");
     console.log(" | " + addSpaces("Tegenover de ijzeren deur is een lange gang.",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     answerstuk6 = ['De ijzeren deur openmaken', 'Doorlopen',],
@@ -172,10 +181,10 @@ function stuk7(dialogue1, dialogue2, dialogue3, dialogue4){
   
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
-    console.log(" | " + addSpaces("Je gaat het gevecht aan met het Skelet. Als je het Skelet verslagen hebt verandert het Skelet en zijn spullen in een hoopje as.",115) + "| ");
-    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur met Kamer 2 erop genoteerd met een sleutel gat.",115) + "| ");
-    console.log(" | " + addSpaces("Tegenover de ijzeren deur is een lange gang je loopt deze gang door en beland in een gang vol met gevangenis cellen. ",115) + "| ");
-    console.log(" | " + addSpaces("Er zitten gevangen in de cellen. Opeens hoor je een zacht gezucht links uit een cel komen. Een man smeekt je om hulp.",115) + "| ");
+    console.log(" | " + addSpaces("Je gaat het gevecht aan met het Skelet. Als je het Skelet verslagen hebt verandert het Skelet in een hoopje as.",115) + "| ");
+    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur met 2 erop genoteerd met een sleutel gat.",115) + "| ");
+    console.log(" | " + addSpaces("Tegenover de deur is een lange gang je loopt deze gang door en beland in een gang vol met gevangenis cellen.",115) + "| ");
+    console.log(" | " + addSpaces("Opeens hoor je een zacht gezucht links uit een cel komen. Een man smeekt je om hulp.",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     answerstuk7 = ['Helpen', 'Doorlopen',],
     indexstuk7 = readline.keyInSelect(answerstuk7, 'Wat kies je?');
@@ -193,9 +202,9 @@ function stuk8(dialogue1, dialogue2, dialogue3, dialogue4){
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
     console.log(" | " + addSpaces("Je loopt terug en bevecht de Skeletten. Als je ze verslagen heb zie je op de tafel een kist met 2 sleutels liggen.",115) + "| ");
-    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur met Kamer 2 erop genoteerd met een sleutel gat.",115) + "| ");
-    console.log(" | " + addSpaces("Op een van de sleutel staat Kamer 4 genoteerd en op de andere sleutel Kamer 5.",115) + "| ");
-    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur in de kamer met daarop Kamer 4 genoteerd. Je gebruikt de sleutel en beland in een kamer met een gewond skelet op de grond.",115) + "| ");
+    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur met 2 erop genoteerd met een sleutel gat.",115) + "| ");
+    console.log(" | " + addSpaces("Op een van de sleutel staat 4 genoteerd en op de andere sleutel Kamer 5.",115) + "| ");
+    console.log(" | " + addSpaces("Je ziet een deur met daarop 4 genoteerd. Als je de sleutel gebruik zie je een skelet die gewond op de grond ligt",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     answerstuk8 = ['Helpen', 'Doodmaken',],
     indexstuk8 = readline.keyInSelect(answerstuk8, 'Wat kies je?');
@@ -237,8 +246,8 @@ function stuk10(dialogue1, dialogue2, dialogue3, dialogue4){
    
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
-    console.log(" | " + addSpaces("Je maakt de ijzeren deur open en bevindt je in een goed verlichte kamer wat op een lounge plek lijkt. Je ziet op het plafond een luik.",115) + "| ");
-    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur met Kamer 2 erop genoteerd met een sleutel gat.",115) + "| ");
+    console.log(" | " + addSpaces("Je maakt de ijzeren deur open en bevindt je in een kamer wat op een lounge plek lijkt. Je ziet op het plafond een luik.",115) + "| ");
+    console.log(" | " + addSpaces("Je ziet een grote ijzeren deur met 2 erop genoteerd met een sleutel gat.",115) + "| ");
     console.log(" | " + addSpaces("Zonder enige keuze besluit je het gevecht aan te gaan. Zodra je gewonnen heb ren je snel de troon kamer uit,",115) + "| ");
     console.log(" | " + addSpaces("en belandt je in een hal vol met wapens en pantsers. Je hoort ook een groep Skeletten jou kant op komen.",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
@@ -329,7 +338,7 @@ function stuk16(dialogue1, dialogue2, dialogue3, dialogue4){
    
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
-    console.log(" | " + addSpaces("Je loopt Gang 1 binnen en de deur sluit achter je. Je ziet een groep Skeletten die je meteen proberen uit te schakelen.",115) + "| ");
+    console.log(" | " + addSpaces("Je loopt Gang 1 binnen en de deur sluit achter je. Je ziet een groep Skeletten die je meteen uit schakelt.",115) + "| ");
     console.log(" | " + addSpaces("Zodra je ze verslagen heb valt het je op dat er een raam in de kamer is.",115) + "| ");
     console.log(" | " + addSpaces("Je slaat deze in en je ontsnapt. Je bent vrij",115) + "| ");
     console.log(" | " + addSpaces("XXX EINDE 4 : ONTSNAPT XXX",115) + "| ");
@@ -381,8 +390,8 @@ function stuk18(dialogue1, dialogue2, dialogue3, dialogue4){
     drawInterface()
     console.log(" ______________________________________________________________________________________________________________________ ");
     console.log(" | " + addSpaces("Je loopt Gang 3 binnen en de deur sluit achter je. Je ziet een man bij een deur zitten.",115) + "| ");
-    console.log(" | " + addSpaces("Hij vertelt je dat hij je vrij zal laten als jij zijn spel kan winnen, als je verliest zal hij de beveiliging roepen, ",115) + "| ");
-    console.log(" | " + addSpaces("en zal je weer in je cel gegooid worden. ",115) + "| ");
+    console.log(" | " + addSpaces("Hij vertelt je dat hij je vrij zal laten als jij zijn spel kan winnen,",115) + "| ");
+    console.log(" | " + addSpaces("als je verliest zal hij de beveiliging roepen, en zal je weer in je cel gegooid worden. ",115) + "| ");
     console.log(" | " + addSpaces("Het spel van de man is Raad het Getal. Als jij 1 getal die zich binnen de 10 bevindt ben je vrij.",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     console.log("                                                                                                                        ");
@@ -390,7 +399,7 @@ function stuk18(dialogue1, dialogue2, dialogue3, dialogue4){
 
 
     let guessNumber = Math.floor(Math.random() * 9) + 2;
-    console.log(guessNumber)
+    
     let guessedNumber = readline.question("Raad het getal tussen de 1 en 10 : ");
 
     if (guessNumber == guessedNumber) {
@@ -416,11 +425,75 @@ function stuk18(dialogue1, dialogue2, dialogue3, dialogue4){
 
 
 }
-
+function stuk19(dialogue1, dialogue2, dialogue3, dialogue4){
+   
+    drawInterface()
+    console.log(" ______________________________________________________________________________________________________________________ ");
+    console.log(" | " + addSpaces("Je loopt Gang 4 binnen en de deur sluit achter je. Je beland in de pauze kamer van de beveiliging. ",115) + "| ");
+    console.log(" | " + addSpaces("Je wordt gearresteerd en begint opnieuw",115) + "| ");
+    console.log(" | " + addSpaces("",115) + "| ");
+    console.log(" | " + addSpaces("XXX EINDE 3 : ONTSNAPT XXX",115) + "| ");
+    console.log(" |____________________________________________________________________________________________________________________| ");
+    console.log("                                                                                                                        ");
+    console.log("                                                                                                                        ");
+   
+}
+function stuk20(dialogue1, dialogue2, dialogue3, dialogue4){
+   
+    drawInterface()
+    console.log(" ______________________________________________________________________________________________________________________ ");
+    console.log(" | " + addSpaces("Je probeert de Skeletten te verslappen maar het zijn er teveel en je sterft aan een steek van een Zwaard",115) + "| ");
+    console.log(" | " + addSpaces(" ",115) + "| ");
+    console.log(" | " + addSpaces("",115) + "| ");
+    console.log(" | " + addSpaces("XXX EINDE 6 : DOOD IN GEVECHT XXX",115) + "| ");
+    console.log(" |____________________________________________________________________________________________________________________| ");
+    console.log("                                                                                                                        ");
+    console.log("                                                                                                                        ");
+   
+}
+function stuk21(dialogue1, dialogue2, dialogue3, dialogue4){
+   
+    drawInterface()
+    console.log(" ______________________________________________________________________________________________________________________ ");
+    console.log(" | " + addSpaces("Je probeert weg te rennen maar je zit vast en je sterft aan een steek van een Zwaard",115) + "| ");
+    console.log(" | " + addSpaces(" ",115) + "| ");
+    console.log(" | " + addSpaces("",115) + "| ");
+    console.log(" | " + addSpaces("XXX EINDE 6 : DOOD IN GEVECHT XXX",115) + "| ");
+    console.log(" |____________________________________________________________________________________________________________________| ");
+    console.log("                                                                                                                        ");
+    console.log("                                                                                                                        ");
+   
+}
+function stuk22(dialogue1, dialogue2, dialogue3, dialogue4){
+   
+    drawInterface()
+    console.log(" ______________________________________________________________________________________________________________________ ");
+    console.log(" | " + addSpaces("Terwijl je je rug keert wordt je in je rug gestoken door de man en sterf je aan zijn handen.",115) + "| ");
+    console.log(" | " + addSpaces(" ",115) + "| ");
+    console.log(" | " + addSpaces("",115) + "| ");
+    console.log(" | " + addSpaces("XXX EINDE 5 : VERRAAD XXX",115) + "| ");
+    console.log(" |____________________________________________________________________________________________________________________| ");
+    console.log("                                                                                                                        ");
+    console.log("                                                                                                                        ");
+   
+}
+function stuk23(dialogue1, dialogue2, dialogue3, dialogue4){
+   
+    drawInterface()
+    console.log(" ______________________________________________________________________________________________________________________ ");
+    console.log(" | " + addSpaces("Terwijl je je rug keert wordt je in je rug gestoken door de man en sterf je aan zijn handen.",115) + "| ");
+    console.log(" | " + addSpaces(" ",115) + "| ");
+    console.log(" | " + addSpaces("",115) + "| ");
+    console.log(" | " + addSpaces("XXX EINDE 5 : VERRAAD XXX",115) + "| ");
+    console.log(" |____________________________________________________________________________________________________________________| ");
+    console.log("                                                                                                                        ");
+    console.log("                                                                                                                        ");
+   
+}
 
 
 
 drawInterface()
 stuk0()
 
-let answer = readline.question("");
+
