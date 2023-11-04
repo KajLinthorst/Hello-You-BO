@@ -81,7 +81,6 @@ function stuk2(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log("                                                                                                                        ");
     console.log("                                                                                                                        ");
 }
-
 function stuk3(dialogue1, dialogue2, dialogue3, dialogue4){
     
     console.log(" ______________________________________________________________________________________________________________________ ");
@@ -132,8 +131,9 @@ function stuk5(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
-    
+    console.log("                                        o                                                                                ");
+    console.log("                      XXXXXXXXXXXXX    /|/          XXXXXXXXXXX                                                          ");
+    console.log("                                  X     |           X                                                                    ");
 
 }
 function stuk6(dialogue1, dialogue2, dialogue3, dialogue4){
@@ -251,8 +251,9 @@ function stuk11(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("XXX EINDE 1 : DOOD DOOR EEN VAL XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
-   
+    console.log("                                        o                                                                                ");
+    console.log("                      XXXXXXXXXXXXX    /|/          XXXXXXXXXXX                                                          ");
+    console.log("                                  X     |           X                                                                    ");
 }
 function stuk12(dialogue1, dialogue2, dialogue3, dialogue4){
    
@@ -283,8 +284,12 @@ function stuk13(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("",115) + "| ");
     console.log(" | " + addSpaces("XXX EINDE 4 : ONTSNAPT XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
-    console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
+    console.log("                           XX      XX                                                                                     ");
+    console.log("                           XXXXXXXXXX                                                                                     ");
+    console.log("                           X        X                                                                                     ");
+    console.log("                           X              o                                                                               ");
+    console.log("                           X          =  /|/                                                                              ");
+    console.log("                           X          =   ^                                                                               ");
    
 }
 function stuk14(dialogue1, dialogue2, dialogue3, dialogue4){
@@ -294,10 +299,13 @@ function stuk14(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("Voordat je kan reageren komen opeens tientallen Skeletten tevoorschijn.",115) + "| ");
     console.log(" | " + addSpaces("Het bleek een val te zijn. ",115) + "| ");
     console.log(" | " + addSpaces("Je wordt gevangen genomen en begint weer vanuit de cel.",115) + "| ");
-    console.log(" | " + addSpaces("XXX EINDE 3 : BETRAPT XXX",115) + "| ");
+    console.log(" | " + addSpaces("XXX EINDE 3 : GEPAKT XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
-    console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
+    console.log("                                       ______________________                                                            ");
+    console.log("                                       |  |  |  |  |  |  |  |                                                            ");
+    console.log("                                       |  |  |  |  |  |  |  |                                                            ");
+    console.log("                                       |  |  |  |  |  |  |  |                                                            ");      
+    console.log("                                       |__|__|__|__|__|__|__|                                                            ");  
    
 }
 function stuk15(dialogue1, dialogue2, dialogue3, dialogue4){
@@ -309,9 +317,12 @@ function stuk15(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("Je rent door totdat je voor de uitgang komt. Met al je kracht trap je de deur open en ontsnap je.",115) + "| ");
     console.log(" | " + addSpaces("XXX EINDE 4 : ONTSNAPT XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
-    console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
-   
+    console.log("                           XX      XX                                                                                     ");
+    console.log("                           XXXXXXXXXX                                                                                     ");
+    console.log("                           X        X                                                                                     ");
+    console.log("                           X              o                                                                               ");
+    console.log("                           X          =  /|/                                                                              ");
+    console.log("                           X          =   ^                                                                               ");
 }
 function stuk16(dialogue1, dialogue2, dialogue3, dialogue4){
    
@@ -322,9 +333,12 @@ function stuk16(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("Je slaat deze in en je ontsnapt. Je bent vrij",115) + "| ");
     console.log(" | " + addSpaces("XXX EINDE 4 : ONTSNAPT XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
-    console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
-   
+    console.log("                           XX      XX                                                                                     ");
+    console.log("                           XXXXXXXXXX                                                                                     ");
+    console.log("                           X        X                                                                                     ");
+    console.log("                           X              o                                                                               ");
+    console.log("                           X          =  /|/                                                                              ");
+    console.log("                           X          =   ^                                                                               ");
 }
 function stuk17(dialogue1, dialogue2, dialogue3, dialogue4){
    
@@ -350,7 +364,9 @@ function stuk17(dialogue1, dialogue2, dialogue3, dialogue4){
         console.log(" | " + addSpaces("XXX EINDE : 1 DOOD DOOR EEN VAL XXX",115) + "| ");
         console.log(" |____________________________________________________________________________________________________________________| ");
         console.log("                                                                                                                        ");
-        
+        console.log("                                        o                                                                                ");
+        console.log("                      XXXXXXXXXXXXX    /|/          XXXXXXXXXXX                                                          ");
+        console.log("                                  X     |           X                                                                    ");
     } else {
         
         console.log(" ______________________________________________________________________________________________________________________ ");
@@ -359,10 +375,15 @@ function stuk17(dialogue1, dialogue2, dialogue3, dialogue4){
         console.log(" | " + addSpaces("",115) + "| ");
         console.log(" | " + addSpaces("XXX EINDE : 4 ONTSNAPT XXX",115) + "| ");
         console.log(" |____________________________________________________________________________________________________________________| ");
-        console.log("                                                                                                                        ");      
-    }
+        console.log("                           XX      XX                                                                                     ");
+        console.log("                           XXXXXXXXXX                                                                                     ");
+        console.log("                           X        X                                                                                     ");
+        console.log("                           X              o                                                                               ");
+        console.log("                           X          =  /|/                                                                              ");
+        console.log("                           X          =   ^                                                                               ");
 
 
+}
 }
 function stuk18(dialogue1, dialogue2, dialogue3, dialogue4){
    
@@ -389,8 +410,12 @@ function stuk18(dialogue1, dialogue2, dialogue3, dialogue4){
         console.log(" | " + addSpaces("",115) + "| ");
         console.log(" | " + addSpaces("XXX EINDE : 4 ONTSNAPT XXX",115) + "| ");
         console.log(" |____________________________________________________________________________________________________________________| ");
-        console.log("                                                                                                                        ");
-        
+        console.log("                           XX      XX                                                                                     ");
+        console.log("                           XXXXXXXXXX                                                                                     ");
+        console.log("                           X        X                                                                                     ");
+        console.log("                           X              o                                                                               ");
+        console.log("                           X          =  /|/                                                                              ");
+        console.log("                           X          =   ^                                                                               ");
     } else {
         
         console.log(" ______________________________________________________________________________________________________________________ ");
@@ -399,7 +424,11 @@ function stuk18(dialogue1, dialogue2, dialogue3, dialogue4){
         console.log(" | " + addSpaces("",115) + "| ");
         console.log(" | " + addSpaces("XXX EINDE : 3 GEPAKT XXX",115) + "| ");
         console.log(" |____________________________________________________________________________________________________________________| ");
-        console.log("                                                                                                                        ");      
+        console.log("                                       ______________________                                                            ");
+        console.log("                                       |  |  |  |  |  |  |  |                                                            ");
+        console.log("                                       |  |  |  |  |  |  |  |                                                            ");
+        console.log("                                       |  |  |  |  |  |  |  |                                                            ");      
+        console.log("                                       |__|__|__|__|__|__|__|                                                            ");
     }
 
 
@@ -411,10 +440,13 @@ function stuk19(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("Je loopt Gang 4 binnen en de deur sluit achter je. Je beland in de pauze kamer van de beveiliging. ",115) + "| ");
     console.log(" | " + addSpaces("Je wordt gearresteerd en begint opnieuw",115) + "| ");
     console.log(" | " + addSpaces("",115) + "| ");
-    console.log(" | " + addSpaces("XXX EINDE 3 : ONTSNAPT XXX",115) + "| ");
+    console.log(" | " + addSpaces("XXX EINDE 3 : GEPAKT XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
-    console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
+    console.log("                                       ______________________                                                            ");
+    console.log("                                       |  |  |  |  |  |  |  |                                                            ");
+    console.log("                                       |  |  |  |  |  |  |  |                                                            ");
+    console.log("                                       |  |  |  |  |  |  |  |                                                            ");      
+    console.log("                                       |__|__|__|__|__|__|__|                                                            ");                                                                                                                      
    
 }
 function stuk20(dialogue1, dialogue2, dialogue3, dialogue4){
@@ -426,9 +458,10 @@ function stuk20(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("",115) + "| ");
     console.log(" | " + addSpaces("XXX EINDE 6 : DOOD IN GEVECHT XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
-    console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
-   
+    console.log("                                  XXXXXXX                                                                                 ");
+    console.log("                                 X r.i.p X                                                                                ");
+    console.log("                                 X       X                                                                                ");
+    console.log("                                 X       X                                                                                ");
 }
 function stuk21(dialogue1, dialogue2, dialogue3, dialogue4){
    
@@ -439,9 +472,10 @@ function stuk21(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("",115) + "| ");
     console.log(" | " + addSpaces("XXX EINDE 6 : DOOD IN GEVECHT XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
-    console.log("                                                                                                                        ");
-    console.log("                                                                                                                        ");
-   
+    console.log("                                  XXXXXXX                                                                                 ");
+    console.log("                                 X r.i.p X                                                                                ");
+    console.log("                                 X       X                                                                                ");
+    console.log("                                 X       X                                                                                ");
 }
 function stuk22(dialogue1, dialogue2, dialogue3, dialogue4){
    
@@ -454,8 +488,11 @@ function stuk22(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("XXX EINDE 5 : VERRAAD XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     console.log("                                                                                                                        ");
+    console.log("                                    o       o                                                                           ");
+    console.log("                                   /|/   <--|/                                                                          ");
+    console.log("                                    ^       ^                                                                           ");
     console.log("                                                                                                                        ");
-   
+    console.log("                                                                                                                        ");
 }
 function stuk23(dialogue1, dialogue2, dialogue3, dialogue4){
    
@@ -467,9 +504,12 @@ function stuk23(dialogue1, dialogue2, dialogue3, dialogue4){
     console.log(" | " + addSpaces("XXX EINDE 5 : VERRAAD XXX",115) + "| ");
     console.log(" |____________________________________________________________________________________________________________________| ");
     console.log("                                                                                                                        ");
+    console.log("                                    o       o                                                                           ");
+    console.log("                                   /|/   <--|/                                                                          ");
+    console.log("                                    ^       ^                                                                           ");
     console.log("                                                                                                                        ");
-   
-}
+    console.log("                                                                                                                        ");
+}   
 
 stuk0()
 
